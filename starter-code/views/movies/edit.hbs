@@ -1,0 +1,24 @@
+<h2>Une erreur ? Changez un film maintenant.</h2>
+
+<form method="POST" action="/movies/{{movies._id}}/edit">
+    <label>
+        Titre
+        <input type="text" name="title" value="{{movies.title}}">
+    </label>
+    <label>
+        genre
+        <input type="text" name="genre" value="{{movies.genre}}">
+    </label>
+    <label>
+        Intrigue
+        <input type="text" name="plot" value="{{movies.plot}}">
+    </label>
+     <label>
+        Cast
+        <select multiple name="cast">{{#each allCeleb}}
+            <option value="{{name}}">{{name}}</option>         
+            {{/each}}
+        </select>
+    </label>
+    <button>Modifier pour toujours</button>
+</form>

@@ -1,0 +1,17 @@
+<h2>Une erreur ? Changez une celeb maintenant.</h2>
+
+<form method="POST" action="/celebrities/{{celeb._id}}/edit">
+    <label>
+        Nom
+        <input type="text" name="name" value="{{celeb.name}}">
+    </label>
+    <label>
+        occupation
+        <input type="text" name="occupation" value="{{celeb.occupation}}">
+    </label>
+    <label>
+        catchPhrase
+        <input type="text" name="catchPhrase" value="{{celeb.catchPhrase}}">
+    </label>
+    <button>Modifier pour toujours</button>
+</form>

@@ -1,0 +1,26 @@
+<h2>Vous voulez ajouter un nouveau film ? C'est ici. Hic et nunc.</h2>
+
+<form method="POST">
+    <label>
+        Titre
+        <input type="text" name="title" placeholder="Gladiator">
+    </label>
+    <label>
+        Genre
+        <input type="text" name="genre" placeholder="epique">
+    </label>
+    <label>
+        Intrigue
+        <input type="text" name="plot" placeholder="Une histoire d'hommes et d'honneur">
+    </label>
+    <label>
+        Cast
+        <select multiple name="cast">{{#each allCeleb}}
+            <option value="{{name}}">{{name}}</option>         
+            {{/each}}
+        </select>
+    </label>
+        
+    <button>Ajouter pour toujours</button>
+</form>
+
